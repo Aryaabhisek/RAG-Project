@@ -1,4 +1,4 @@
-from langchain_community.document_loaders import TextLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain_mistralai import ChatMistralAI
 from langchain_core.prompts import ChatPromptTemplate
 
@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-data = TextLoader("document loaders/notes.txt")
+data = PyPDFLoader("document loaders/Aryaabhisek_Mahapatra_Resume.pdf")
 
 docs = data.load()
 
